@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel – FoodShare</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">FoodShare – Admin</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <button class="outline" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Admin Control Panel</h1>
+
+    <section class="card">
+      <h2>Pending Donations</h2>
+      <table id="pendingDonationsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Donor</th>
+            <th>Food</th>
+            <th>Quantity</th>
+            <th>Verify</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Filled by JS -->
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Notifications Sent (WhatsApp / Call)</h2>
+      <table id="notificationsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Donation</th>
+            <th>Receiver</th>
+            <th>Channel</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Filled by JS -->
+        </tbody>
+      </table>
+    <section class="card">
+      <h2>Test WhatsApp Message</h2>
+      <form id="whatsappTestForm" onsubmit="testWhatsApp(event)">
+        <label>To (WhatsApp number, e.g., +1234567890)</label>
+        <input type="text" id="whatsappTo" placeholder="+1234567890" required />
+
+        <label>Message</label>
+        <textarea id="whatsappMessage" rows="3" placeholder="Test message" required></textarea>
+
+        <button type="submit">Send Test WhatsApp</button>
+      </form>
+      <p class="hint">
+        Requires Twilio setup with valid credentials and WhatsApp number.
+      </p>
+    </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
 
