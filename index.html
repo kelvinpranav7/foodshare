@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FoodShare – Food Waste Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">FoodShare</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#how">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Reduce Food Waste. Feed More People.</h1>
+        <p>
+          A trusted platform that connects Hotels & Function Halls with
+          verified NGOs and Trusts through admin-supervised food donations.
+        </p>
+        <div class="hero-actions">
+          <button onclick="showLoginBox('DONOR')">I'm a Donor</button>
+          <button onclick="showLoginBox('NGO')">I'm an NGO</button>
+          <button class="outline" onclick="showLoginBox('ADMIN')">
+            Admin Login
+          </button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h2>Quick Login</h2>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+          <label>Role</label>
+          <input type="text" id="loginRole" value="DONOR" readonly />
+
+          <label>Email</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" required />
+
+          <label>Password</label>
+          <input type="password" id="loginPassword" placeholder="your password" required />
+
+          <button type="submit">Login</button>
+          <p class="hint">
+            New user? <a href="registration.html">Register here</a>.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About FoodShare</h2>
+      <p>
+        Hotels and event halls often have surplus edible food after functions.
+        At the same time, NGOs and Trusts struggle to find enough food for
+        the needy. FoodShare creates a verified communication channel with
+        admin control to make sure food reaches the right hands on time.
+      </p>
+    </section>
+
+    <section id="how" class="section">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <h3>Donor Posts Food</h3>
+          <p>Hotels/Function Halls submit leftover food details.</p>
+        </div>
+        <div class="step">
+          <span>2</span>
+          <h3>Admin Verifies</h3>
+          <p>Admin checks availability and authenticity of the donor.</p>
+        </div>
+        <div class="step">
+          <span>3</span>
+          <h3>NGOs Notified</h3>
+          <p>Admin calls / sends WhatsApp alerts to verified NGOs.</p>
+        </div>
+        <div class="step">
+          <span>4</span>
+          <h3>Food Collected</h3>
+          <p>Authorized NGO representatives collect the food.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>
+        For registration and verification, please contact the system admin.
+      </p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
 
